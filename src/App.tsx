@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import ReactPlayer from 'react-player';
 import { Search, Music, Zap, Activity, Play, Hash, Sparkles, Waves, BarChart3, Scan, Target, Gauge, Music2 } from 'lucide-react';
 
+// Deploy Trigger: Updated at 2026-04-01
 const API_KEY = "AIzaSyBvr9VWt3i-tGL_UEA1Dejh6EzHAcRCwYM"; 
 const NOTES = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
 
