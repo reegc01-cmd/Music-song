@@ -141,6 +141,13 @@ function App() {
     try {
       const res = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&key=${API_KEY}&type=video&videoCategoryId=10&maxResults=10`);
       const data = await res.json();
+      
+      if (!data.items) {
+        console.warn('검색 결과를 찾을 수 없거나 API 한도가 초과되었습니다.', data);
+        setSearchResults([]);
+        return;
+      }
+
       setSearchResults(data.items.map((i: any) => ({
         id: i.id.videoId,
         title: i.snippet.title,
